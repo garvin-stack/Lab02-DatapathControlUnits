@@ -1,11 +1,11 @@
 //=========================================================================
 // Name & Email must be EXACTLY as in Gradescope roster!
-// Name: 
-// Email: 
+// Name:Garvin Ha 
+// Email:gha003@ucr.edu
 // 
-// Assignment name: 
-// Lab section: 
-// TA: 
+// Assignment name: Lab2-DatapathControlUnits
+// Lab section: 021
+// TA: Eren, Omar
 // 
 // I hereby certify that I have not received assistance on this assignment,
 // or used code, from ANY outside source other than the instruction team
@@ -16,7 +16,7 @@
 module aluControlUnit (
     input  wire [1:0] alu_op, 
     input  wire [5:0] instruction_5_0, 
-    output wire [3:0] alu_out
+    output reg [3:0] alu_out
     );
 
 // ------------------------------
