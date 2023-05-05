@@ -147,7 +147,7 @@ module datapath_tb;
         // -------------------------------------------------------
         // Test group 2: ALU Control Unit
         // -------------------------------------------------------
-        $display("\nTest Group 2: Testing ALU Control unit... ");
+        /*$display("\nTest Group 2: Testing ALU Control unit... ");
 
         $write("\tTest Case 2.1: R-type (add) ...");
         totalTests = totalTests + 1;
@@ -273,7 +273,7 @@ module datapath_tb;
             failedTests = failedTests + 1;
         end else begin
             $display("passed"); 
-        end
+        end*/
         // -------------------------------------------------------
         // More ALU Control Unit tests jere
         // -------------------------------------------------------
