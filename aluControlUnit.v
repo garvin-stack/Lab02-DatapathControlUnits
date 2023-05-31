@@ -52,9 +52,6 @@ begin
     else if(instruction_5_0==6'b100111) begin//nor
         alu_out = 4'b1100;
     end
-    else if(instruction_5_0==6'b100000) begin
-        alu_out = 4'b0010;
-    end
   end // End else 
 
 end  // End block 

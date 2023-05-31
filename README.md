@@ -410,12 +410,15 @@ get low or no marks. The report should be a part of REPORT.md.
 
 ### Producing the Waveform
 
+
 Once you've synthesized the code for the test-bench and the `aluControlUnit` and `controlUnit` modules, you can run
 the test-bench simulation script to make sure all the tests pass. This simluation run should
 produce the code to make a waveform. Use techniques you learned in the first lab to produce a
 waveform for this lab and save it as a PNG. 
 
 You don't need to add a marker this time. Also, I've provided a .gtkw.
+
+![image](lab02gtk.JPG)
 
 ### The Lab Report
 
