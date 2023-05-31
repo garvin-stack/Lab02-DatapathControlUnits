@@ -62,7 +62,7 @@ begin
         alu_op =     2'b00;
     end
     6'b000100 : begin//beq
-        reg_dst =    1'b0;
+        reg_dst =    1'b1;
         alu_src =    1'b0;
         mem_to_reg = 1'b0;
         reg_write =  1'b0;
