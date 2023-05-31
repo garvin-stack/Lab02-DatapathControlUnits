@@ -22,5 +22,39 @@ module aluControlUnit (
 // ------------------------------
 // Insert your solution below
 // ------------------------------ 
+always @(alu_op, instruction_5_0)
+begin 
+
+ if (alu_op==2'b00) begin // LW and SW 
+	alu_out = 4'b0010; 
+ end 
+
+ else if (alu_op==2'b01) begin  // Branch 
+		alu_out = 4'b0110; 
+ end
+ 
+ else begin 
+    if(instruction_5_0==6'b000000) begin
+        alu_out = 4'b0010;
+    end
+    else if(instruction_5_0==6'b000010) begin
+        alu_out = 4'b0110;
+    end
+    else if(instruction_5_0==6'b000100) begin
+        alu_out = 4'b0000;
+    end
+    else if(instruction_5_0==6'b000101) begin
+        alu_out = 4'b0001;
+    end
+    else if(instruction_5_0==6'b001010) begin
+        alu_out = 4'b0111;
+    end
+    else if(instruction_5_0==6'b000111) begin
+        alu_out = 4'b1100;
+    end
+
+  end // End else 
+
+end  // End block 
 
 endmodule

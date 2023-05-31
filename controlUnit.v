@@ -15,19 +15,19 @@
 
 module controlUnit  (
     input  wire [5:0] instr_op, 
-    output wire       reg_dst,   
-    output wire       branch,     
-    output wire       mem_read,  
-    output wire       mem_to_reg,
-    output wire [1:0] alu_op,        
-    output wire       mem_write, 
-    output wire       alu_src,    
-    output wire       reg_write
+    output reg       reg_dst,   
+    output reg       branch,     
+    output reg       mem_read,  
+    output reg       mem_to_reg,
+    output reg [1:0] alu_op,        
+    output reg       mem_write, 
+    output reg       alu_src,    
+    output reg       reg_write
     );
 
 // ------------------------------
 // Insert your solution below
-always@(*)
+always@(instr_op)
 begin
     case(instr_op)
     6'b000000 : begin//R-format
@@ -56,8 +56,8 @@ begin
         alu_src =    1'b1;
         mem_to_reg = 1'b0;
         reg_write =  1'b0;
-        mem_read =   1'b1;
-        mem_write =  1'b0;
+        mem_read =   1'b0;
+        mem_write =  1'b1;
         branch  =    1'b0;
         alu_op =     2'b00;
     end
@@ -66,22 +66,22 @@ begin
         alu_src =    1'b0;
         mem_to_reg = 1'b0;
         reg_write =  1'b0;
-        mem_read =   1'b1;
+        mem_read =   1'b0;
         mem_write =  1'b0;
         branch  =    1'b1;
         alu_op =     2'b01;
     end
     6'b001000 : begin//imm
-        reg_dst =    1'b0;
+        reg_dst =    1'b1;
         alu_src =    1'b0;
         mem_to_reg = 1'b0;
-        reg_write =  1'b0;
-        mem_read =   1'b1;
+        reg_write =  1'b1;
+        mem_read =   1'b0;
         mem_write =  1'b0;
-        branch  =    1'b1;
-        alu_op =     2'b01;
+        branch  =    1'b0;
+        alu_op =     2'b10;
     end
+    endcase
 end
 // ------------------------------ 
-
 endmodule
