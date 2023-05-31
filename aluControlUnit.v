@@ -34,25 +34,27 @@ begin
  end
  
  else begin 
-    if(instruction_5_0==6'b000000) begin
+    if(instruction_5_0==6'b100000) begin//ADD
         alu_out = 4'b0010;
     end
-    else if(instruction_5_0==6'b000010) begin
+    else if(instruction_5_0==6'b100010) begin//SUB
         alu_out = 4'b0110;
     end
-    else if(instruction_5_0==6'b000100) begin
+    else if(instruction_5_0==6'b100100) begin//AND
         alu_out = 4'b0000;
     end
-    else if(instruction_5_0==6'b000101) begin
+    else if(instruction_5_0==6'b100101) begin//or
         alu_out = 4'b0001;
     end
-    else if(instruction_5_0==6'b001010) begin
+    else if(instruction_5_0==6'b101010) begin//set less
         alu_out = 4'b0111;
     end
-    else if(instruction_5_0==6'b000111) begin
+    else if(instruction_5_0==6'b100111) begin//nor
         alu_out = 4'b1100;
     end
-
+    else if(instruction_5_0==6'b100000) begin
+        alu_out = 4'b0010;
+    end
   end // End else 
 
 end  // End block 
